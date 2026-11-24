@@ -1,0 +1,24 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+*.egg-info/
+build/
+dist/
+.verification/
+third_party/
+.cache/
+**/cache/
+**/runs/
+**/results/
+**/outputs/
+**/wandb/
+*.h5
+*.h5.partial
+examples/quad3d/data/*.pt
+examples/rope/models/KO_rope/dagger_replay.h5
+examples/quad3d/eval/KO_eval_plots/
+
+# Local README previews
+*.html

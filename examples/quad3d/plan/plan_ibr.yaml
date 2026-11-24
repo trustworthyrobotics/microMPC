@@ -1,0 +1,103 @@
+# Complete defaults. CLI flags override YAML; paths are repository-relative.
+# PD fixed-point tolerance measures step-scaled primal and dual iterate changes.
+schema_version: 1
+runtime:
+  model_path: quad3d/models/KO_quad3d.pt
+  device: cuda
+  precision: 32
+  horizon: 75
+  max_mpc_steps: 1500
+  seed: null
+  dt: 0.025
+objective:
+  control_weight: 5.0
+  q_state:
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.001
+  - 0.001
+  - 0.001
+  - 0.001
+  - 0.001
+  - 0.001
+  - 0.001
+  - 0.001
+  - 0.001
+  q_terminal:
+  - 15.0
+  - 15.0
+  - 15.0
+  - 10.0
+  - 10.0
+  - 10.0
+  - 10.0
+  - 10.0
+  - 10.0
+  - 10.0
+  - 10.0
+  - 10.0
+  u_min:
+  - 0.0
+  - -0.1
+  - -0.1
+  - -0.1
+  u_max:
+  - 19.62
+  - 0.1
+  - 0.1
+  - 0.1
+  control_reference:
+  - 9.81
+  - 0.0
+  - 0.0
+  - 0.0
+solver:
+  cache_dir: quad3d/plan/cache/plan_ibr
+  pd_rho: 125.0
+  pd_iterations: 150
+  pd_mode: converged
+  pd_primal_tol: 0.01
+  pd_fixed_point_tol: 0.01
+  pd_step_safety: 0.99
+  pd_extrapolation: 1.0
+  warm_start: true
+  sqp_iterations: 1
+  pd_check_interval: 5
+task:
+  # Shared stopping tolerance for random and left-to-right modes (meters).
+  goal_tol: 0.25
+  workspace_lower:
+  - 0.0
+  - 0.0
+  - 0.0
+  workspace_upper:
+  - 25.0
+  - 25.0
+  - 25.0
+  batch_size: 1
+  num_robots: 100
+  ibr_iterations: 2
+  ibr_relaxation: 0.8
+  quad_radius: 0.1
+  model_error_buffer: 0.15
+  endpoint_clearance: 1.0
+  mode: random
+  max_yz_goal_displacement: 5.0
+  ko_window_size: 5.0
+  ibr_convergence_tol: 0.002
+output:
+  plot: true
+  timing_warmup_cycles: 5
+  results_path: quad3d/plan/results/plan_ibr/summary.json
+  video: false
+  video_path: quad3d/plan/results/plan_ibr/trajectory.mp4
+  video_stride: 5
+  collision_plot_path: quad3d/plan/results/plan_ibr/collision_clearance.png
+  save_collision_plot: true
+  npz_path: quad3d/plan/results/plan_ibr/run.npz
+  save_npz: true
+  disable_progress: false
+  debug_numerics: true
+  debug_numerics_log: quad3d/plan/results/plan_ibr/numerics.jsonl
+  numerical_abs_limit: 10000.0

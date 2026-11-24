@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "micrompc"
+version = "0.1.0"
+description = "Koopman learning and proximal primal-dual model predictive control"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.11"
+dependencies = []
+
+[tool.setuptools]
+license-files = ["LICENSE"]
+package-dir = {micrompc = "."}
+packages = [
+    "micrompc",
+    "micrompc.examples",
+    "micrompc.examples.quad3d",
+    "micrompc.examples.quad3d.data",
+    "micrompc.examples.quad3d.eval",
+    "micrompc.examples.quad3d.plan",
+    "micrompc.examples.quad3d.shared",
+    "micrompc.examples.quad3d.train",
+    "micrompc.examples.rope",
+    "micrompc.examples.rope.data",
+    "micrompc.examples.rope.plan",
+    "micrompc.examples.rope.shared",
+    "micrompc.examples.rope.train",
+    "micrompc.solver",
+    "micrompc.trainer",
+]
+include-package-data = false
+
+[tool.setuptools.package-data]
+"micrompc.examples.quad3d" = ["models/*.pt"]
+"micrompc.examples.quad3d.plan" = ["*.yaml"]
+"micrompc.examples.rope" = ["models/KO_rope/last.ckpt"]
+"micrompc.examples.rope.plan" = ["*.yaml"]
+"micrompc.examples.rope.train" = ["*.yaml"]
+"micrompc.examples.rope.shared" = ["*.xml", "kuka_iiwa_14/*.xml", "kuka_iiwa_14/LICENSE", "kuka_iiwa_14/README.md", "kuka_iiwa_14/CHANGELOG.md", "kuka_iiwa_14/assets/*.obj"]
