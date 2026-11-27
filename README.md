@@ -1,7 +1,7 @@
 # ![μMPC](docs/assets/micrompc-logo.svg)
 
 <p align="center">
-  <strong><a href="https://www.deveshnath.com/projects/micrompc/" target="_blank" rel="noopener noreferrer">Project Website</a>&nbsp;&nbsp; · &nbsp;&nbsp;<a href="https://arxiv.org/abs/2611.34597v1" target="_blank" rel="noopener noreferrer">Paper</a>&nbsp;&nbsp; · &nbsp;&nbsp;<a href="https://youtu.be/KMsVFYA1S3A" target="_blank" rel="noopener noreferrer">Video</a></strong>
+  <strong><a href="https://www.deveshnath.com/projects/micrompc/" target="_blank" rel="noopener noreferrer">Project Website</a>&nbsp;&nbsp; · &nbsp;&nbsp;<a href="https://arxiv.org/abs/2611.34597v1" target="_blank" rel="noopener noreferrer">Paper</a>&nbsp;&nbsp; · &nbsp;&nbsp;<a href="https://youtu.be/KMsVFYA1S3A" target="_blank" rel="noopener noreferrer">Video</a>&nbsp;&nbsp; · &nbsp;&nbsp;<a href="#cite">Cite</a></strong>
 </p>
 
 **Constrained nonlinear and world model control in microseconds.**
@@ -84,3 +84,17 @@ examples/   Quadrotor and visual rope control
 
 Code and bundled model checkpoints are licensed under the [MIT License](LICENSE).
 Third-party robot assets retain their [license](examples/rope/shared/kuka_iiwa_14/LICENSE).
+
+## Cite
+
+```bibtex
+@misc{nath2026mumpcmicrosecondscalenonlinearworld,
+  title={$\mu$MPC: Microsecond-Scale Nonlinear and World Model Control from Edge to GPU via Koopman-Linearized Precompilation},
+  author={Devesh Nath and Glen Chou},
+  year={2026},
+  eprint={2611.34597},
+  archivePrefix={arXiv},
+  primaryClass={cs.RO},
+  url={https://arxiv.org/abs/2611.34597},
+}
+```
