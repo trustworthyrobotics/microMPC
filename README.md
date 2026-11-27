@@ -1,7 +1,7 @@
 # ![μMPC](docs/assets/micrompc-logo.svg)
 
 <p align="center">
-  <strong><a href="https://www.deveshnath.com/projects/micrompc/" target="_blank" rel="noopener noreferrer">Project Website</a>&nbsp;&nbsp; · &nbsp;&nbsp;<a href="#paper-coming-soon" target="_blank" rel="noopener noreferrer">Paper</a>&nbsp;&nbsp; · &nbsp;&nbsp;<a href="#video-coming-soon" target="_blank" rel="noopener noreferrer">Video</a></strong>
+  <strong><a href="https://www.deveshnath.com/projects/micrompc/" target="_blank" rel="noopener noreferrer">Project Website</a>&nbsp;&nbsp; · &nbsp;&nbsp;<a href="https://arxiv.org/abs/2611.34597v1" target="_blank" rel="noopener noreferrer">Paper</a>&nbsp;&nbsp; · &nbsp;&nbsp;<a href="https://youtu.be/KMsVFYA1S3A" target="_blank" rel="noopener noreferrer">Video</a></strong>
 </p>
 
 **Constrained nonlinear and world model control in microseconds.**
