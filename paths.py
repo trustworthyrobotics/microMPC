@@ -9,6 +9,6 @@ def resolve_path(path):
     path = Path(path).expanduser()
     if path.is_absolute():
         return path.resolve()
-    if path.parts and path.parts[0] in {"quad3d", "rope"}:
+    if path.parts and path.parts[0] in {"quadrotor", "rope_manipulation"}:
         path = Path("examples") / path
     return (PROJECT_ROOT / path).resolve()

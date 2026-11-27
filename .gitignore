@@ -16,9 +16,9 @@ third_party/
 **/wandb/
 *.h5
 *.h5.partial
-examples/quad3d/data/*.pt
-examples/rope/models/KO_rope/dagger_replay.h5
-examples/quad3d/eval/KO_eval_plots/
+examples/quadrotor/data/*.pt
+examples/rope_manipulation/models/KO_rope/dagger_replay.h5
+examples/quadrotor/eval/KO_eval_plots/
 
 # Local README previews
 *.html

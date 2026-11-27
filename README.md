@@ -37,17 +37,17 @@ Prefer pip? Replace `uv pip` with `python -m pip` after activating the environme
 Quadrotor: nominal control, obstacle avoidance, and multi-robot planning.
 
 ```bash
-python -m micrompc.examples.quad3d.plan.plan_nominal
-python -m micrompc.examples.quad3d.plan.plan_obs
-python -m micrompc.examples.quad3d.plan.plan_ibr
+python -m micrompc.examples.quadrotor.plan.plan_nominal
+python -m micrompc.examples.quadrotor.plan.plan_obs
+python -m micrompc.examples.quadrotor.plan.plan_ibr
 ```
 
-Rope: generate initial states and goal images, then plan.
+Bimanual rope manipulation with a visual world model: generate initial states and goal images, then plan.
 
 ```bash
-python -m micrompc.examples.rope.data.generate_data \
-  --outdir rope/data/test --num-trajectories 8 --batch-size 8
-python -m micrompc.examples.rope.plan.plan_nominal
+python -m micrompc.examples.rope_manipulation.data.generate_data \
+  --outdir rope_manipulation/data/test --num-trajectories 8 --batch-size 8
+python -m micrompc.examples.rope_manipulation.plan.plan_nominal
 ```
 
 ## Train
@@ -55,16 +55,16 @@ python -m micrompc.examples.rope.plan.plan_nominal
 Quadrotor:
 
 ```bash
-python -m micrompc.examples.quad3d.data.generate_data \
+python -m micrompc.examples.quadrotor.data.generate_data \
   --num-trajectories 500 --workers 10
-python -m micrompc.examples.quad3d.train.train_inverse_qp
+python -m micrompc.examples.quadrotor.train.train_inverse_qp
 ```
 
-Rope:
+Bimanual rope manipulation with a visual world model:
 
 ```bash
-python -m micrompc.examples.rope.data.generate_data --outdir rope/data/train
-python -m micrompc.examples.rope.train.train
+python -m micrompc.examples.rope_manipulation.data.generate_data --outdir rope_manipulation/data/train
+python -m micrompc.examples.rope_manipulation.train.train
 ```
 
 ## Code
@@ -77,13 +77,13 @@ examples/   Quadrotor and visual rope control
 
 ## Models
 
-- Quadrotor: `examples/quad3d/models/KO_quad3d.pt`
-- Rope: `examples/rope/models/KO_rope/last.ckpt`
+- Quadrotor: `examples/quadrotor/models/KO_quadrotor.pt`
+- Bimanual rope manipulation with a visual world model: `examples/rope_manipulation/models/KO_rope/last.ckpt`
 
 ## License
 
 Code and bundled model checkpoints are licensed under the [MIT License](LICENSE).
-Third-party robot assets retain their [license](examples/rope/shared/kuka_iiwa_14/LICENSE).
+Third-party robot assets retain their [license](examples/rope_manipulation/shared/kuka_iiwa_14/LICENSE).
 
 ## Cite
 
